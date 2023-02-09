@@ -1,0 +1,96 @@
+﻿a. Remove the closing curly-bracket (}).
+        main.c: In function 'main':
+main.c:8:5: error: expected declaration or statement at end of input
+    8 |     return 0;
+      |     ^~~~~~
+
+
+
+
+** Process exited - Return Code: 1 **
+b. Remove the opening curly-bracket ({).
+        main.c: In function 'main':
+main.c:7:5: error: expected declaration specifiers before 'printf'
+    7 |     printf("Hello World!");
+      |     ^~~~~~
+main.c:8:5: error: expected declaration specifiers before 'return'
+    8 |     return 0;
+      |     ^~~~~~
+main.c:9:1: error: expected declaration specifiers before '}' token
+    9 | }
+      | ^
+main.c:9: error: expected '{' at end of input
+    9 | }
+      | 
+** Process exited - Return Code: 1 **
+
+
+c. Remove the int before main.
+        main.c:5:2: warning: return type defaults to 'int' [-Wimplicit-int]
+    5 |  main()
+      |  ^~~~
+Hello World!
+
+
+** Process exited - Return Code: 0 **
+d. Instead of main, write mian.
+/usr/lib/gcc/x86_64-alpine-linux-musl/9.3.0/../../../../x86_64-
+alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/9.3.0/../../../../lib/Scrt1.o: in function `_start_c':
+/home/buildozer/aports/main/musl/src/musl-1.1.24/crt/crt1.c:18: undefined reference to `main'
+collect2: error: ld returned 1 exit status
+
+
+
+
+** Process exited - Return Code: 1 **
+e. Remove the closing */ from a comment.
+main.c:3:1: error: unterminated comment
+    3 | /* Lab 1; program by Mickeyla Clark
+      | ^ ** Process exited - Return Code: 1 **
+
+
+f. Replace printf with pintf.
+main.c: In function 'main':
+main.c:7:5: warning: implicit declaration of function 'pintf'; did you mean 'printf'? [-Wimplicit-function-declaration]
+    7 |     pintf("Hello World!");
+      |     ^~~~~
+      |     printf
+/usr/lib/gcc/x86_64-alpine-linux-musl/9.3.0/../../../../x86_64
+-alpine-linux-musl/bin/ld: /tmp/ccgLllOM.o: in function `main':
+main.c:(.text+0x11): undefined reference to `pintf'
+collect2: error: ld returned 1 exit status
+
+
+
+
+** Process exited - Return Code: 1 **
+g. Delete one of the parentheses: ( or ). Add an extra one.
+main.c: In function 'main':
+main.c:7:11: error: expected ';' before string constant
+    7 |     printf"Hello World!"));
+      |           ^~~~~~~~~~~~~~
+      |           ;
+main.c:7:25: error: expected statement before ')' token
+    7 |     printf"Hello World!"));
+      |                         ^
+main.c:7:26: error: expected statement before ')' token
+    7 |     printf"Hello World!"));
+      |                          ^
+
+
+
+
+** Process exited - Return Code: 1 **
+h. Delete the semicolon after the return statement.
+main.c: In function 'main':
+main.c:8:13: error: expected ';' before '}' token
+    8 |     return 0
+      |             ^
+      |             ;
+    9 | }
+      | ~            
+
+
+
+
+** Process exited - Return Code: 1 **
