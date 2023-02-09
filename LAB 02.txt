@@ -1,0 +1,115 @@
+//Lab 02 by Mickeyla Clark
+
+
+//Preprocessor Directives
+#include <stdio.h>
+
+
+//Main Program
+int main()
+{
+    //Code for Problem 1
+    float beginning, end, total, reimbursement;
+    
+    printf("MILEAGE REIMBURSEMENT CALCULATOR \n");
+    
+    printf("Enter the beginning odometer reading:\n");
+    scanf("%f", &beginning);
+    
+    printf("Enter the ending odometer reading:\n");
+    scanf("%f", &end);
+    
+    total = end - beginning;
+    reimbursement = 0.655 * total;
+    printf("You traveled %f miles.\n", total);
+    printf("At $0.655 per mile, your reimbursement is $%.1f\n", reimbursement);
+    
+    //Code for Problem 02
+    float fahrenheit, celsius;
+    
+    printf("FAHRENHEIT TO CELISUS CALCULATOR\n");
+    printf("Enter the temperature in Farenheit:\n");
+    scanf("%f", &fahrenheit);
+    
+    celsius = (5/9.0) * (fahrenheit - 32);
+    printf("%f degrees Fahrenheit is %f degrees Celsius\n", fahrenheit, celsius);
+
+
+    return 0;
+}
+
+
+/* 
+MILEAGE REIMBURSEMENT CALCULATOR 
+Enter the beginning odometer reading:
+0
+Enter the ending odometer reading:
+0
+You traveled 0.000000 miles.
+At $0.655 per mile, your reimbursement is $0.000000
+FAHRENHEIT TO CELISUS CALCULATOR
+Enter the temperature in Farenheit:
+212
+212.000000 degrees Fahrenheit is 100.000000 degrees Celsius
+
+
+
+
+** Process exited - Return Code: 0 **
+
+
+MILEAGE REIMBURSEMENT CALCULATOR 
+Enter the beginning odometer reading:
+0
+Enter the ending odometer reading:
+100
+You traveled 100.000000 miles.
+At $0.655 per mile, your reimbursement is $65.500000
+FAHRENHEIT TO CELISUS CALCULATOR
+Enter the temperature in Farenheit:
+32
+32.000000 degrees Fahrenheit is 0.000000 degrees Celsius
+
+
+
+
+** Process exited - Return Code: 0 **
+
+
+MILEAGE REIMBURSEMENT CALCULATOR 
+Enter the beginning odometer reading:
+0
+Enter the ending odometer reading:
+429
+You traveled 429.000000 miles.
+At $0.655 per mile, your reimbursement is $281.0
+FAHRENHEIT TO CELISUS CALCULATOR
+Enter the temperature in Farenheit:
+-459.67
+-459.670013 degrees Fahrenheit is -273.149994 degrees Celsius
+
+
+
+
+** Process exited - Return Code: 0 **
+
+
+MILEAGE REIMBURSEMENT CALCULATOR 
+Enter the beginning odometer reading:
+500
+Enter the ending odometer reading:
+600
+You traveled 100.000000 miles.
+At $0.655 per mile, your reimbursement is $65.500000
+FAHRENHEIT TO CELISUS CALCULATOR
+Enter the temperature in Farenheit:
+98.6
+98.599998 degrees Fahrenheit is 37.000000 degrees Celsius
+
+
+
+
+** Process exited - Return Code: 0 **
+
+
+*/
