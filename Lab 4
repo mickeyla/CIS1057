@@ -1,0 +1,78 @@
+//Lab 4 by Mickeyla Clark
+
+int main(void) {
+
+    //Day of Year print/scan
+    int day, month, year, doy;
+
+    //Enter the date (MM/DD/YYY)
+    printf("CALCULATE THE DAY OF YEAR. \n");
+    printf("Enter a date in the format of (MM/DD/YYY): \n");
+    scanf("%i/%i/%i", &month, &day, &year);
+
+    doy = day_of_year(month, doy);
+    printf("%i/%i/%i is the %i day of the year\n", month, day, year, doy);
+    return 0;
+}
+
+
+int day_of_year(int month, int doy){
+    //Check if it is a leap year first
+    int year, day;
+    int days_in_february = leap_year(year);
+
+    //Determines day of year
+    switch(month){
+        case 2:
+            doy += 31;//Feb
+            break;
+        case 3:
+            doy += 31+days_in_february;//March
+            break;
+        case 4:
+            doy += 31+days_in_february+31;//April
+            break;
+        case 5:
+            doy += 31+days_in_february+31+30;//May
+            break;
+        case 6:
+            doy += 31+days_in_february+31+30+31;//June
+            break;
+        case 7:
+            doy += 31+days_in_february+31+30+31+30;//July
+            break;
+        case 8:
+            doy += 31+days_in_february+31+30+31+30+31;//August
+            break;
+        case 9:
+            doy += 31+days_in_february+31+30+31+30+31+31;//Sept
+            break;
+        case 10:
+            doy += 31+days_in_february+31+30+31+30+31+31+30;//Oct
+            break;
+        case 11:
+            doy += 31+days_in_february+31+30+31+30+31+31+30+31;//Nov
+            break;
+        case 12:
+            doy += 31+days_in_february+31+30+31+30+31+31+30+31+30;//Dec
+            break;
+    }
+    doy += day;
+
+return doy;
+}
+
+int leap_year(int y){
+
+    int febdays;
+
+    if (y % 4 == 0 && y % 100 != 0)
+        febdays = 29;
+    else if (y % 400 == 0)
+        febdays = 29;
+    else
+        febdays = 28;
+
+    return febdays;
+}
+
